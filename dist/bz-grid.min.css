@@ -39,6 +39,7 @@ body {
 }
 .bz-grid .thead {
   background-color: #ccc;
+  border-bottom: 1px solid #aaaaaa;
 }
 .bz-grid .thead .tr {
   box-shadow: 0 10px 30px 0 #f0f0f0 inset;
@@ -54,15 +55,22 @@ body {
   height: auto;
   height: 33px;
 }
-.bz-grid .th,
-.bz-grid .td {
+.bz-grid .th {
   height: 100%;
   padding: 5px 5px;
-  border-top: 1px solid #aaaaaa;
   border-left: 1px solid #aaaaaa;
   overflow: hidden;
 }
-.bz-grid .th:first-child,
+.bz-grid .th:first-child {
+  border-left: none;
+}
+.bz-grid .td {
+  height: 100%;
+  padding: 5px 5px;
+  border-bottom: 1px solid #aaaaaa;
+  border-left: 1px solid #aaaaaa;
+  overflow: hidden;
+}
 .bz-grid .td:first-child {
   border-left: none;
 }
