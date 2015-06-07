@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo - bzGrid</title>
+		<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="../bower_components/fontawesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../dist/bz-grid.min.css">
+	</head>
+	<body ng-app="myApp">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" ng-controller="myController">
+					<br/>
+					<bz-grid model="pessoas" class="hovered bordered striped condensed">
+						<bz-column title="#" sort-by='id' width="5%">{{row.id}}</bz-column>
+						
+						<bz-column title="Nome" sort-by='nome' width="35%">
+						<a href="#/edit/{{row.id}}">{{row.nome}}</a>
+						</bz-column>
+						
+						<bz-column title="E-Mail" sort-by='email' width="30%">{{row.email}}</bz-column>
+						
+						<bz-column title="Física/Jurídica" sort-by='pf_pj' width="15%">
+						{{row.pf_pj}}
+						</bz-column>
+						
+						<bz-column title="Ações" width="15%">
+							<a href="#" class="btn btn-xs btn-default" title="Editar">
+								<i class="fa fa-pencil"></i>
+							</a>
+							<a href="#" class="btn btn-xs btn-danger" title="Excluir">
+								<i class="fa fa-trash-o"></i>
+							</a>
+							<a href="#" class="btn btn-xs btn-default" title="Novo Contrato">
+								<i class="fa fa-file-o"></i>
+							</a>
+						</bz-column>
+					</bz-grid>
+				</div>
+			</div>
+		</div>
+		<script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+		<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../bower_components/angular/angular.min.js" type="text/javascript"></script>
+		<script src="../dist/bz-grid.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			angular.module('myApp', ['bzGrid']).controller('myController', function($scope) {
+				$scope.pessoas = [{
+					id: 1,
+					nome: "Paulo Bezerra",
+					email: "bezerra.paulo@gmail.com",
+					pf_pj: "PF"
+				}, {
+					id: 2,
+					nome: "Fulano de Tal",
+					email: "fula.tal@email.com",
+					pf_pj: "PF"
+				}, {
+					id: 3,
+					nome: "Empresa SA",
+					email: "contato@empresa.com",
+					pf_pj: "PJ"
+				}, {
+					id: 4,
+					nome: "Paulo Bezerra",
+					email: "bezerra.paulo@gmail.com",
+					pf_pj: "PF"
+				}, {
+					id: 5,
+					nome: "Fulano de Tal",
+					email: "fula.tal@email.com",
+					pf_pj: "PF"
+				}, {
+					id: 6,
+					nome: "Empresa SA",
+					email: "contato@empresa.com",
+					pf_pj: "PJ"
+				}, {
+					id: 7,
+					nome: "Paulo Bezerra",
+					email: "bezerra.paulo@gmail.com",
+					pf_pj: "PF"
+				}, {
+					id: 8,
+					nome: "Fulano de Tal",
+					email: "fula.tal@email.com",
+					pf_pj: "PF"
+				}, {
+					id: 9,
+					nome: "Empresa SA",
+					email: "contato@empresa.com",
+					pf_pj: "PJ"
+				}, {
+					id: 10,
+					nome: "Paulo Bezerra",
+					email: "bezerra.paulo@gmail.com",
+					pf_pj: "PF"
+				}, {
+					id: 11,
+					nome: "Fulano de Tal",
+					email: "fula.tal@email.com",
+					pf_pj: "PF"
+				}, {
+					id: 12,
+					nome: "Empresa SA",
+					email: "contato@empresa.com",
+					pf_pj: "PJ"
+				}];
+			});
+		</script>
+	</body>
+</html>

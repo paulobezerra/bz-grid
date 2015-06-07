@@ -1,0 +1,24 @@
+{
+  "name": "bz-grid",
+  "version": "0.0.0",
+  "authors": [
+    "Paulo Bezerra <bezerra.paulo@gmail.com>"
+  ],
+  "description": "Grid do Paulo Bezerra",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://paulobezerra.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "perfect-scrollbar": "~0.6.2"
+  }
+}
